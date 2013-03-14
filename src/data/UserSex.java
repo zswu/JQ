@@ -11,11 +11,7 @@
 package data;
 
  /**
- * 性别类。
- * 2008-8-30
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
+ * 性别类。 
  */
 public class UserSex {
 
@@ -27,8 +23,8 @@ public class UserSex {
 		this.name = name;
 	}
 	
-	public static UserSex Boy = new UserSex(0,"男");
-	public static UserSex Girl = new UserSex(1,"女");
+	public static UserSex Boy = new UserSex(0,"male");
+	public static UserSex Girl = new UserSex(1,"female");
 	
 	public String toString() {
 		return name;

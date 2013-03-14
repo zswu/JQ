@@ -16,11 +16,6 @@ import javax.swing.JPanel;
 
  /**
  * 仅仅为了填充BorderLayout的宽度
- * 2008-8-28
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- * @author		Administrator
  */
 public class FillWidth extends JPanel {
 

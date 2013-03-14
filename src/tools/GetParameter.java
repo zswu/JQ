@@ -19,10 +19,6 @@ import java.util.Properties;
 
  /**
  * 获取参数。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class GetParameter {
 

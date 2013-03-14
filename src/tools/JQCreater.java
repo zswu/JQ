@@ -22,11 +22,6 @@ import server.frm.Server;
 
  /**
  * JQ号生成器类。
- * 2008-9-3
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- * @author		Administrator
  */
 public class JQCreater {
 

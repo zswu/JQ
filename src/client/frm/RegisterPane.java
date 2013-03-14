@@ -56,20 +56,16 @@ import data.UserState;
 
  /**
  * 新用户注册类。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class RegisterPane extends JFrame implements ActionListener{
-	private JLabel lblNickName = new JLabel("用户昵称:");
+	private JLabel lblNickName = new JLabel("Nickname:");
 	private JLabel lblEmail = new JLabel("E-mail:");
-	private JLabel lblPassword = new JLabel("登录密码:");
-	private JLabel lblRePass = new JLabel("重复输入:");
-	private JLabel lblSex = 	new JLabel("性    别:");
-	private JLabel lblAge = new JLabel("年龄:");
-	private JLabel lblRealName = new JLabel("姓名:");
-	private JLabel lblSignature = new JLabel("个性签名:");
+	private JLabel lblPassword = new JLabel("Password:");
+	private JLabel lblRePass = new JLabel("Confirm Password:");
+	private JLabel lblSex = 	new JLabel("Sex:");
+	private JLabel lblAge = new JLabel("Age:");
+	private JLabel lblRealName = new JLabel("Name:");
+	private JLabel lblSignature = new JLabel("Signature:");
 	
 	private JTextField txtNickName = new JTextField();
 	private JTextField txtEmail= new JTextField();
@@ -81,17 +77,17 @@ public class RegisterPane extends JFrame implements ActionListener{
 	private JTextArea areaSignature = new JTextArea();
 	
 	private JLabel lblPhoto = new JLabel();
-	private JButton btnChange = new JButton("更改头像");
+	private JButton btnChange = new JButton("Photo");
 	
-	private JButton btnSet = new JButton("设置↓");
-	private JButton btnOk = new JButton("注册");
-	private JButton btnCancle = new JButton("取消");
+	private JButton btnSet = new JButton("Setup↓");
+	private JButton btnOk = new JButton("Register");
+	private JButton btnCancle = new JButton("Cancel");
 	
 	private ChooseProtrait chooseProtrait = null;
 	
-	private JLabel lblServerIP = new JLabel("服务器IP:");
+	private JLabel lblServerIP = new JLabel("Server IP:");
 	private JTextField txtServerIP = new JTextField("127.0.0.1");
-	private JLabel lblServerPort = new JLabel("端口:");
+	private JLabel lblServerPort = new JLabel("Port:");
 	private JTextField txtServerPort = new JTextField("3608");
 	private boolean isSet = false;
 	
@@ -100,7 +96,7 @@ public class RegisterPane extends JFrame implements ActionListener{
 	private ObjectInputStream ois = null;
 	
 	public RegisterPane() {
-		setTitle("JQ新用户注册");
+		setTitle("Register");
 		setSize(330,343);
 		setResizable(false);
 		Toolkit tk=Toolkit.getDefaultToolkit();
@@ -155,7 +151,7 @@ public class RegisterPane extends JFrame implements ActionListener{
 		boxSex.addItem(UserSex.Girl);
 		
 		JPanel paneRequire = new JPanel();
-		paneRequire.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"必填选项"));
+		paneRequire.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"Must fill in"));
 		paneRequire.setSize(210,135);
 		paneRequire.setLocation(10, 10);
 		paneRequire.setLayout(new FlowLayout(FlowLayout.LEFT,5,6));
@@ -169,7 +165,7 @@ public class RegisterPane extends JFrame implements ActionListener{
 		paneRequire.add(pfRePass);
 		
 		JPanel paneUnRequire = new JPanel();
-		paneUnRequire.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"选填选项"));
+		paneUnRequire.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"Option"));
 		paneUnRequire.setSize(305,125);
 		paneUnRequire.setLocation(10, 150);
 		paneUnRequire.setLayout(new FlowLayout(FlowLayout.LEFT,5,6));
@@ -183,7 +179,7 @@ public class RegisterPane extends JFrame implements ActionListener{
 		paneUnRequire.add(sp);
 		
 		JPanel panePhoto = new JPanel();
-		panePhoto.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"头像"));
+		panePhoto.setBorder(new TitledBorder(new LineBorder(Color.GRAY),"Photo"));
 		panePhoto.setSize(85,135);
 		panePhoto.setLocation(230, 10);
 		panePhoto.setLayout(new FlowLayout(FlowLayout.CENTER,5,8));
@@ -201,7 +197,7 @@ public class RegisterPane extends JFrame implements ActionListener{
 		paneBottom.add(new FillWidth(8,20));
 		paneBottom.add(btnCancle);
 		
-		TitledBorder tb = new TitledBorder(new LineBorder(Color.GRAY),"网络设置");
+		TitledBorder tb = new TitledBorder(new LineBorder(Color.GRAY),"Set up");
 		JPanel paneSet = new JPanel();
 		paneSet.setSize(305,60);
 		paneSet.setLocation(10,313);
@@ -243,9 +239,9 @@ public class RegisterPane extends JFrame implements ActionListener{
 						new RegNewUser().start();
 					}
 					else
-						JOptionPane.showMessageDialog(null, "2次密码输入的不一致,请重新输入!");
+						JOptionPane.showMessageDialog(null, "Please confirm the password!");
 				} catch (IOException e1) {
-					JOptionPane.showMessageDialog(null, "错误:"+e1.getMessage());
+					JOptionPane.showMessageDialog(null, "Error:"+e1.getMessage());
 				}
 			
 		}
@@ -253,21 +249,17 @@ public class RegisterPane extends JFrame implements ActionListener{
 			if(isSet){
 				isSet = false;
 				setSize(getWidth(),getHeight()-65);
-				btnSet.setText("设置↓");
+				btnSet.setText("Set up↓");
 			}else{
 				isSet = true;
 				setSize(getWidth(),getHeight()+65);
-				btnSet.setText("设置↑");
+				btnSet.setText("Set up↑");
 			}
 		}
 	}
 	
 	/**
 	 * 注册新用户线程
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class RegNewUser extends Thread{
 		
@@ -323,10 +315,10 @@ public class RegisterPane extends JFrame implements ActionListener{
 					}
 				}
 			} catch (IOException e) {
-				JOptionPane.showMessageDialog(null, "发生错误,原因:"+e.getMessage());
+				JOptionPane.showMessageDialog(null, "Error:"+e.getMessage());
 				closeClient();
 			} catch (ClassNotFoundException e) {
-				JOptionPane.showMessageDialog(null, "发生错误,原因:"+e.getMessage());
+				JOptionPane.showMessageDialog(null, "Error:"+e.getMessage());
 				closeClient();
 			}	
 		}
@@ -337,23 +329,19 @@ public class RegisterPane extends JFrame implements ActionListener{
 				if(ois!=null)ois.close();ois = null;
 				if(client!=null)client.close();client=null;
 			} catch (IOException e) {
-				System.out.println("错误:"+e.getMessage());
+				System.out.println("Error:"+e.getMessage());
 			}
 		}
 	}
 	
 	/**
-	 * 注册成功窗口
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
+	 * 注册成功窗口 
 	 */
 	private class RegSuccess extends JDialog implements ActionListener{
 		
 		private JTextArea txtInfo = new JTextArea();
-		private JButton btnLogin = new JButton("直接登录");
-		private JButton btnReturn = new JButton("返回登陆界面");
+		private JButton btnLogin = new JButton("Login");
+		private JButton btnReturn = new JButton("Back to Login interface");
 		private RegUser user;
 		
 		public RegSuccess(RegUser user,Frame owner, boolean modal) {
@@ -363,18 +351,18 @@ public class RegisterPane extends JFrame implements ActionListener{
 			setResizable(false);
 			Toolkit tk=Toolkit.getDefaultToolkit();
 			setLocation((tk.getScreenSize().width-getSize().width)/2,(tk.getScreenSize().height-getSize().height)/2);
-			setTitle("注册信息");
+			setTitle("Message");
 			
-			txtInfo.setText("恭喜!"+user.getRealname()+",注册成功！\n"+
-					"用户昵称:"+user.getNickname()+"\n"+
-					"登陆号码:"+user.getJqnum()+"\n"+
-					"登陆密码:"+user.getPassword()+"\n"+
-					"请妥善保管您的号码和密码!");
+			txtInfo.setText("Ok!"+user.getRealname()+",Successed！\n"+
+					"Nickname:"+user.getNickname()+"\n"+
+					"Account Number:"+user.getJqnum()+"\n"+
+					"Password:"+user.getPassword()+"\n"+
+					"Carefull with your password!");
 			txtInfo.setEditable(false);
 			txtInfo.setOpaque(true);
 			txtInfo.setBackground(this.getBackground());
 			txtInfo.setPreferredSize(new Dimension(200,100));
-			txtInfo.setBorder(new TitledBorder(new LineBorder(Color.DARK_GRAY)," 注册信息 "));
+			txtInfo.setBorder(new TitledBorder(new LineBorder(Color.DARK_GRAY)," Message "));
 			setLayout(new FlowLayout(FlowLayout.CENTER,10,10));
 			
 			btnLogin.addActionListener(this);
@@ -402,28 +390,24 @@ public class RegisterPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 选择头像窗口
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class ChooseProtrait extends JDialog implements ActionListener{
 		private JButton[] btnPortrait = new JButton[158];
 		private Portrait[] portraits = new Portrait[158];
 		
-		private JLabel lblBoys = new JLabel("男士头像(共30个)");
-		private JLabel lblGirls = new JLabel("女士头像(共29个)");
-		private JLabel lblAnimals = new JLabel("动物头像(共36个)");
-		private JLabel lblOthers = new JLabel("其他头像(共63个)");
+		private JLabel lblBoys = new JLabel("male(30)");
+		private JLabel lblGirls = new JLabel("female(29)");
+		private JLabel lblAnimals = new JLabel("animal(36)");
+		private JLabel lblOthers = new JLabel("other(63)");
 		
-		private JLabel lblViewInfo = new JLabel("预览:");
+		private JLabel lblViewInfo = new JLabel("preview:");
 		private JLabel lblPhotoView = new JLabel();
 		
-		private JButton btnP_Ok = new JButton("确定");
-		private JButton btnP_Cancle = new JButton("取消");
+		private JButton btnP_Ok = new JButton("confirm");
+		private JButton btnP_Cancle = new JButton("cancel");
 		
 		public ChooseProtrait() {
-			setTitle("选择头像");
+			setTitle("choose photo");
 			setSize(500,440);
 			setResizable(false);
 			Toolkit tk=Toolkit.getDefaultToolkit();

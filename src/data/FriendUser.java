@@ -13,11 +13,7 @@ package data;
 import java.io.Serializable;
 
  /**
- * 好友类。用户登陆后，发送好友的信息到客户端。
- * 2008-9-5
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
+ * 好友类。 
  */
 public class FriendUser implements Serializable {
 

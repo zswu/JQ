@@ -19,13 +19,7 @@ import java.io.IOException;
 import tools.SetFont;
 import client.frm.LoginPane;
 
- /**
- * JQ客户端主程序类。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- */
+
 public class JQClient {
 
 	/**

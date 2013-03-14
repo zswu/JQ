@@ -42,10 +42,6 @@ import tools.GetParameter;
  * 3.生成的JQ号的位数，最小位和最大位
  * 4.是否自动备份日志、自动删除日志的天数
  * 5.数据方式选择1.文件方式2.数据库方式(连接参数、用户名、密码、解码集)
- * 2008-8-28
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class ConfigPane extends JPanel implements ActionListener{
 

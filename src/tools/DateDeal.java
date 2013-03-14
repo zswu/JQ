@@ -17,10 +17,6 @@ import java.util.GregorianCalendar;
 
  /**
  * 日期处理类。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class DateDeal {
 

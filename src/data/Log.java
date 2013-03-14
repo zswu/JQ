@@ -17,10 +17,6 @@ import tools.DateDeal;
 
  /**
  * 日志类。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class Log implements Serializable {
 
@@ -75,6 +71,6 @@ public class Log implements Serializable {
 	}
 	
 	public String toString() {
-		return "时间:"+DateDeal.getCurrentTime()+",用户:"+nickname+"["+userid+"],IP:"+ip+",操作:"+what+"\n";
+		return "time:"+DateDeal.getCurrentTime()+",user:"+nickname+"["+userid+"],IP:"+ip+",operation:"+what+"\n";
 	}
 }

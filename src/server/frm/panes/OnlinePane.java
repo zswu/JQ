@@ -45,10 +45,6 @@ import data.UserState;
 
  /**
  * 在线用户面板。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class OnlinePane extends JPanel implements ActionListener,Runnable{
 	/** 查询JQ用户 */
@@ -171,10 +167,6 @@ public class OnlinePane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 查询方式。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class QueryWay{
 		private String name;
@@ -300,10 +292,6 @@ public class OnlinePane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 自己定制的DefaultTableModel
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class MyDefaultTableModel extends DefaultTableModel{
 		
@@ -315,10 +303,6 @@ public class OnlinePane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 广播窗体类。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class BroadcastWindow extends JDialog implements WindowFocusListener,ActionListener{
 		private JTextArea txt = new JTextArea();

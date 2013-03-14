@@ -18,10 +18,6 @@ import javax.swing.ImageIcon;
 
  /**
  * 头像类。
- * 2008-8-30
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class Portrait extends ImageIcon{
 
@@ -38,7 +34,7 @@ public class Portrait extends ImageIcon{
 			path = "/client/images/portrait/"+num+".jpg";
 			setImage(ImageIO.read(Portrait.class.getResource(path)));
 		} catch (IOException e) {
-			System.out.println("加载头像时发生错误"+e.getMessage());
+			System.out.println("Error"+e.getMessage());
 		}
 	}
 	
@@ -52,7 +48,7 @@ public class Portrait extends ImageIcon{
 				path = "/client/images/portrait/"+num+".jpg";
 			setImage(ImageIO.read(Portrait.class.getResource(path)));
 		} catch (IOException e) {
-			System.out.println("加载头像时发生错误"+e.getMessage());
+			System.out.println("Error"+e.getMessage());
 		}
 	}
 	
@@ -75,7 +71,7 @@ public class Portrait extends ImageIcon{
 			//System.out.println(path);
 			setImage(ImageIO.read(Portrait.class.getResource(path)));
 		} catch (IOException e) {
-			System.out.println("加载头像时发生错误"+e.getMessage());
+			System.out.println("Error"+e.getMessage());
 		}
 	}
 	

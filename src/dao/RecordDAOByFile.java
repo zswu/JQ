@@ -26,10 +26,6 @@ import data.Record;
 
  /**
  * 记录操作类，以文件的方式处理Record。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class RecordDAOByFile implements DAO<Record, Integer> {
 

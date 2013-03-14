@@ -60,10 +60,6 @@ import tools.JQCreater;
  * 系统服务面板类。<br>
  * 完成功能：系统的启动与停止<br>
  * 用户的连接日志显示。
- * 2008-8-28
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class ServicePane extends JPanel implements ActionListener,Runnable{
 
@@ -247,10 +243,6 @@ public class ServicePane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 客户端连接类。处理和客户端的各种消息。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class ClientLink implements Runnable,Serializable{
 		

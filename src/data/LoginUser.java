@@ -14,10 +14,6 @@ import java.io.Serializable;
 
  /**
  * 登陆用户类。
- * 2008-9-4
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class LoginUser implements Serializable {
 

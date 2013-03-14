@@ -21,10 +21,6 @@ import javax.swing.UIManager;
 
 /**
  * 设置字体类。
- * 2008-9-27
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public final class SetFont
 {

@@ -28,11 +28,6 @@ import javax.swing.JTextArea;
 
  /**
  * 日志显示类。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- * @author		Administrator
  */
 public class LogPane extends JPanel implements ActionListener{
 

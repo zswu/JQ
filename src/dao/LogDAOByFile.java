@@ -28,11 +28,6 @@ import data.Log;
 
  /**
  * 日志处理类，以文件的方式处理Log。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- * @author		Administrator
  */
 public class LogDAOByFile implements DAO<Log,Integer> {
 
@@ -53,7 +48,7 @@ public class LogDAOByFile implements DAO<Log,Integer> {
 		deleteBeforeSomeDays(delDay);
 		File file = new File(path+File.separator+DateDeal.getCurrentDate()+suffixName);
 		PrintWriter pw = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file,true)));
-		String xlog = "时间:"+DateDeal.getCurrentTime()+",用户:"+log.getNickname()+"["+log.getUserid()+"],IP:"+log.getIp()+",操作:"+log.getWhat()+"\n";
+		String xlog = "time:"+DateDeal.getCurrentTime()+",user:"+log.getNickname()+"["+log.getUserid()+"],IP:"+log.getIp()+",操作:"+log.getWhat()+"\n";
 		pw.write(xlog);
 		pw.flush();
 		pw.close();

@@ -33,31 +33,27 @@ import javax.swing.border.TitledBorder;
 import data.UserState;
 
  /**
- * 登录面板类。<br>
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
+ * 登录面板类。<br> 
  */
 public class LoginPane extends JFrame implements ActionListener{
 
 	private JLabel lblImg = new JLabel();
-	private JLabel lblJQNum = new JLabel("JQ账号");
+	private JLabel lblJQNum = new JLabel("Account Number");
 	private JComboBox boxJQNum = new JComboBox();
-	private JLabel lblPassword = new JLabel("JQ密码");
+	private JLabel lblPassword = new JLabel("Password");
 	private JPasswordField pfPassword = new JPasswordField();
 	
-	private JLabel lblState = new JLabel("状态:");
+	private JLabel lblState = new JLabel("State:");
 	private JComboBox boxState = new JComboBox();
-	private JCheckBox boxAutoLogin = new JCheckBox("自动登录");
+	private JCheckBox boxAutoLogin = new JCheckBox("Login Automatically");
 	
-	private JButton btnRegister = new JButton("申请账号");
-	private JButton btnSet = new JButton("设置↓");
-	private JButton btnLogin = new JButton("登录");
+	private JButton btnRegister = new JButton("Register");
+	private JButton btnSet = new JButton("Set up↓");
+	private JButton btnLogin = new JButton("Login");
 	
-	private JLabel lblServerIP = new JLabel("服务器IP:");
+	private JLabel lblServerIP = new JLabel("Server IP:");
 	private JTextField txtServerIP = new JTextField("127.0.0.1");
-	private JLabel lblServerPort = new JLabel("端口:");
+	private JLabel lblServerPort = new JLabel("Port:");
 	private JTextField txtServerPort = new JTextField("3608");
 	private boolean isSet = false;
 	/**
@@ -65,7 +61,7 @@ public class LoginPane extends JFrame implements ActionListener{
 	 * 
 	 */
 	public LoginPane() {
-		setTitle("JQ用户登录");
+		setTitle("User Login");
 		setSize(324,235);
 		setResizable(false);
 		Toolkit tk=Toolkit.getDefaultToolkit();
@@ -154,11 +150,11 @@ public class LoginPane extends JFrame implements ActionListener{
 			if(isSet){
 				isSet = false;
 				setSize(getWidth(),getHeight()-65);
-				btnSet.setText("设置↓");
+				btnSet.setText("Set up↓");
 			}else{
 				isSet = true;
 				setSize(getWidth(),getHeight()+65);
-				btnSet.setText("设置↑");
+				btnSet.setText("Set up↑");
 			}
 		}
 		if(e.getSource()==btnLogin){

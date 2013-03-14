@@ -402,10 +402,6 @@ import data.UserState;
 
  /**
  * 用户管理面板类。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class UserPane extends JPanel implements ActionListener,Runnable{
 	/** 查询JQ用户 */
@@ -553,10 +549,6 @@ public class UserPane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 查询的方式。
-	 * 2008-8-29
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class QueryWay{
 		private String name;
@@ -680,10 +672,6 @@ public class UserPane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 定制的DefaultTableModel。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class MyDefaultTableModel extends DefaultTableModel{
 		
@@ -695,10 +683,6 @@ public class UserPane extends JPanel implements ActionListener,Runnable{
 	
 	/**
 	 * 鼠标移动至出发事件。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class TableMouseAdapter extends MouseAdapter{
 		public void mouseEntered(MouseEvent e) {

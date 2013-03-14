@@ -12,13 +12,7 @@ package data;
 
 import java.io.Serializable;
 
- /**
- * 注册用户类。
- * 2008-9-4
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- */
+
 public class RegUser implements Serializable {
 	private Integer jqnum;
 	private String realname;

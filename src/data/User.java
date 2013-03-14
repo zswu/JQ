@@ -16,10 +16,6 @@ import java.util.Vector;
 
  /**
  * JavaQQ用户类。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class User implements Serializable {
 
@@ -30,7 +26,7 @@ public class User implements Serializable {
 	private Integer sex = 0;
 	private Integer age = 0;
 	private String password;
-	private String signature = "这家伙很懒,什么也没留下.";
+	private String signature = "......";
 	private String email;
 	private Integer photo = 1;
 	private Integer state = 4;

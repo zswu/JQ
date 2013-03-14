@@ -26,10 +26,6 @@ import tools.SetFont;
 
  /**
  * 服务端主程序类。
- * 2008-8-28
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class JQServer {
 

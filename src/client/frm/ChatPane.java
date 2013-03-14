@@ -69,13 +69,7 @@ import data.Record;
 
 import tools.DateDeal;
 
- /**
- * 聊天窗体类。
- * 2008-9-1
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
- */
+
 public class ChatPane extends JFrame implements ActionListener{
 
 	private JLabel lblTop = new JLabel();
@@ -88,13 +82,13 @@ public class ChatPane extends JFrame implements ActionListener{
 	private JPanel paneTools = new JPanel();
 	private JPanel paneBtn = new JPanel();
 	
-	private JButton btnSend = new JButton("发送(S)");
-	private JButton btnClose = new JButton("关闭(C)");
+	private JButton btnSend = new JButton("Send(S)");
+	private JButton btnClose = new JButton("Close(C)");
 	private JButton btnSet = new JButton("↓");
 	
 	private JPopupMenu popupMenu = new JPopupMenu();
-	private JCheckBoxMenuItem itemEnter = new JCheckBoxMenuItem("按Enter发送");
-	private JCheckBoxMenuItem itemCEnter = new JCheckBoxMenuItem("按Ctrl+Enter发送");
+	private JCheckBoxMenuItem itemEnter = new JCheckBoxMenuItem("Press Enter to Send");
+	private JCheckBoxMenuItem itemCEnter = new JCheckBoxMenuItem("Press Ctrl+Enter to Send");
 	
 	private Color bgColor = new Color(169,213,244);
 	
@@ -117,12 +111,12 @@ public class ChatPane extends JFrame implements ActionListener{
 		this.oos = oos;
 		this.friendUser = friendUser;
 		this.selfUser = selfUser;
-		setTitle("与 "+friendUser.getNickName()+" 交谈中");
+		setTitle("Chatting with "+friendUser.getNickName());
 		setSize(494,500);
 		try {
 			setIconImage(ImageIO.read(ChatPane.class.getResource("/client/images/chat/icon.gif")));
 		} catch (IOException e) {
-			System.out.println("错误"+e.getMessage());
+			System.out.println("Error"+e.getMessage());
 		}
 		//setResizable(false);
 		Toolkit tk=Toolkit.getDefaultToolkit();
@@ -352,7 +346,7 @@ public class ChatPane extends JFrame implements ActionListener{
 		try {
 			document.insertString(document.getLength(), msg+"\n", set);
 		} catch (BadLocationException e) {
-			System.out.println("添加错误");
+			System.out.println("Error");
 		}
 	}
 	
@@ -401,13 +395,7 @@ public class ChatPane extends JFrame implements ActionListener{
 		}
 	}
 	
-	/**
-	 * 发送按钮设置事件类。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
-	 */
+	
 	private class SendKeyListenter extends KeyAdapter{
 		public void keyPressed(KeyEvent e){ 
 			//System.out.println(e.getModifiersEx()+"=="+e.paramString());
@@ -421,10 +409,6 @@ public class ChatPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 表情显示JWindow类。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class FaceWindow extends JWindow implements ActionListener,Runnable,WindowFocusListener,MouseListener{
 		private static final int faceNum  = 134;

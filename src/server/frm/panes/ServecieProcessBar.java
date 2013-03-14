@@ -23,10 +23,6 @@ import javax.swing.Timer;
 
  /**
  * 来回滚动条类。
- * 2008-8-28
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class ServecieProcessBar extends JLabel implements ActionListener{
 

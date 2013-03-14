@@ -28,11 +28,7 @@ import data.User;
 import data.UserState;
 
  /**
- * 用户操作类，以文件的方式处理User。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
+ * 用户操作类，以文件的方式处理User.
  */
 public class UserDAOByFile implements DAO<User,Integer> {
 
@@ -71,18 +67,18 @@ public class UserDAOByFile implements DAO<User,Integer> {
 		User user = new User();
 		user.setId(1);
 		user.setJqnum(jqnum);
-		user.setNickname("系统管理员");
-		user.setRealname("小猪");
-		user.setPassword("admin3608");
-		user.setEmail("zhulf@tarena.com.cn");
+		user.setNickname("admin");
+		user.setRealname("admin");
+		user.setPassword("admin");
+		user.setEmail("wmaoyuting@gmail.com");
 		user.setAge(21);
 		user.setRegisterTime(new Date());
 		try {
 			add(user);
 		} catch (FileNotFoundException e) {
-			System.out.println("添加系统管理员时发生错误:"+e.getMessage());
+			System.out.println("Error:"+e.getMessage());
 		} catch (IOException e) {
-			System.out.println("添加系统管理员时发生错误:"+e.getMessage());
+			System.out.println("Error:"+e.getMessage());
 		}
 	}
 
@@ -119,11 +115,11 @@ public class UserDAOByFile implements DAO<User,Integer> {
 					ois = null;
 				}
 			} catch (FileNotFoundException e) {
-				System.out.println("读取用户信息时错误:"+e.getMessage());
+				System.out.println("Error:"+e.getMessage());
 			} catch (IOException e) {
-				System.out.println("读取用户信息时错误:"+e.getMessage());
+				System.out.println("Error:"+e.getMessage());
 			} catch (ClassNotFoundException e) {
-				System.out.println("读取用户信息时错误:"+e.getMessage());
+				System.out.println("Error:"+e.getMessage());
 			}
 		}
 		return v;

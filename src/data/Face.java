@@ -17,10 +17,6 @@ import javax.swing.ImageIcon;
 
  /**
  * 表情类。
- * 2008-9-17
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class Face extends ImageIcon{
 

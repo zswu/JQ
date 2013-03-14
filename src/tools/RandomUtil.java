@@ -15,10 +15,6 @@ import java.util.Random;
 
 /**
  * 数学类-随机数生成类
- * 2008-07-16
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class RandomUtil {
 

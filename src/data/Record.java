@@ -15,10 +15,6 @@ import java.util.Date;
 
  /**
  * 聊天记录类。
- * 2008-9-2
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class Record implements Serializable {
 

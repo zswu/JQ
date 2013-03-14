@@ -14,10 +14,6 @@ import java.io.Serializable;
 
  /**
  * 用户状态类。
- * 2008-8-29
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
  */
 public class UserState implements Serializable{
 
@@ -34,11 +30,11 @@ public class UserState implements Serializable{
 		this.SName = SName;
 	}
 	
-	public static UserState ONLINESTATE = new UserState("在线",0);
-	public static UserState HIDDENSTATE = new UserState("隐身",1);
-	public static UserState DEPARTURESTATE = new UserState("离开",2);
-	public static UserState BUSYSTATE = new UserState("繁忙",3);
-	public static UserState OFFLIENSTATE = new UserState("离线",4);
+	public static UserState ONLINESTATE = new UserState("Online",0);
+	public static UserState HIDDENSTATE = new UserState("Hidden",1);
+	public static UserState DEPARTURESTATE = new UserState("Departure",2);
+	public static UserState BUSYSTATE = new UserState("Busy",3);
+	public static UserState OFFLIENSTATE = new UserState("Offline",4);
 	
 	public String toString() {
 		return SName;

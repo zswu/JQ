@@ -76,11 +76,7 @@ import data.Record;
 import data.UserState;
 
  /**
- * 主程序类、JQ的主框架类。<br>
- * 2008-8-30
- * @author		达内科技[Tarena Training Group]
- * @version	1.0
- * @since		JDK1.6(建议) 
+ * 主程序类、JQ的主框架类。<br> 
  */
 public class MainPane extends JFrame implements ActionListener{
 
@@ -92,12 +88,12 @@ public class MainPane extends JFrame implements ActionListener{
 	private JList listFriend ;//= new JList();
 	private DefaultListModel listModel = null;
 	
-	private JButton btnMenu = new JButton("菜单");
-	private JButton btnFind = new JButton("查找");
-	private JButton btnSys = new JButton("系统消息");
+	private JButton btnMenu = new JButton("Menu");
+	private JButton btnFind = new JButton("Search");
+	private JButton btnSys = new JButton("System Message");
 	
 	private JLabel lblLoginBar = new JLabel();
-	private JButton btnCancleLogin = new JButton("取消登录");
+	private JButton btnCancleLogin = new JButton("Log off");
 	private JPanel fillWidth = new FillWidth(118,120,Color.WHITE);
 	
 	private Socket client = null;
@@ -121,7 +117,7 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	private FindWindow findWindow = null;
 	private JPopupMenu menu = new JPopupMenu();
-	private JMenuItem itemQuit = new JMenuItem("退出");
+	private JMenuItem itemQuit = new JMenuItem("Exit");
 	
 	private Broadcastwindow broadcastwindow = null;
 	private Thread thread = null;
@@ -141,7 +137,7 @@ public class MainPane extends JFrame implements ActionListener{
 		this.password = password;
 		this.state = state;
 		//System.out.println(jqnum+":"+password+"State:"+state);
-		setTitle("JQ2008");
+		setTitle("Instant Messaging");
 		setSize(200,550);
 		setResizable(false);
 		Toolkit tk=Toolkit.getDefaultToolkit();
@@ -188,10 +184,10 @@ public class MainPane extends JFrame implements ActionListener{
 		v.remove(0);
 		setTitle("JQ2008 "+selfUser.getJqnum());
 		popupMenu = new JPopupMenu();
-		itemChat = new JMenuItem("发送即时消息");
-		itemDelete = new JMenuItem("删除该好友");
-		itemFriendInfo = new JMenuItem("查看好友资料");
-		itemLog = new JMenuItem("聊天记录");
+		itemChat = new JMenuItem("Send Message");
+		itemDelete = new JMenuItem("Delete");
+		itemFriendInfo = new JMenuItem("Check Information");
+		itemLog = new JMenuItem("History");
 		popupMenu.add(itemChat);
 		popupMenu.add(itemFriendInfo);
 		popupMenu.addSeparator();
@@ -199,9 +195,9 @@ public class MainPane extends JFrame implements ActionListener{
 		popupMenu.addSeparator();
 		popupMenu.add(itemDelete);
 		
-		menu.add(new JMenuItem("设置"));
+		menu.add(new JMenuItem("Set up"));
 		menu.addSeparator();
-		menu.add(new JMenuItem("帮助"));
+		menu.add(new JMenuItem("Help"));
 		menu.addSeparator();
 		menu.add(itemQuit);
 		itemQuit.addActionListener(this);
@@ -397,10 +393,6 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 自己定制的好友类表的ListCellRenderer
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class CompanyLogoListCellRenderer extends DefaultListCellRenderer {
         public Component getListCellRendererComponent(JList list,Object value,int index,boolean isSelected,boolean cellHasFocus){
@@ -417,10 +409,7 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 鼠标事件，完成鼠标进入好友List中，选中好友，双击与好友进行聊天等。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
+
 	 */
 	private class ListMouseAdapter extends MouseAdapter{
 		public void mouseMoved(MouseEvent e) {
@@ -476,10 +465,7 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 登陆线程。处理服务端的信息以及发送消息到服务端。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
+
 	 */
 	private class LoginThread extends Thread{
 		
@@ -720,10 +706,6 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 书写消息线程。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class WriteThread extends Thread{
 		private JQMessage message = null;
@@ -760,18 +742,14 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/** 
 	 * 查找好友窗口。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class FindWindow extends JDialog implements ActionListener{
 		private JTabbedPane paneFindWay = new JTabbedPane();
 		private JPanel paneBtn = new JPanel();
-		private JButton btnFind = new JButton("查找");
-		private JButton btnClose = new JButton("关闭");
-		private JButton btnPrevious = new JButton("上一步");
-		private JButton btnAddFriend = new JButton("加为好友");
+		private JButton btnFind = new JButton("Search");
+		private JButton btnClose = new JButton("Close");
+		private JButton btnPrevious = new JButton("Back");
+		private JButton btnAddFriend = new JButton("Add Friend");
 		
 		private JPanel paneBaseFind = new JPanel();
 		private CardLayout card = new CardLayout();
@@ -779,13 +757,13 @@ public class MainPane extends JFrame implements ActionListener{
 		private JPanel paneBaseFirst = new JPanel();
 		private JPanel paneBaseSecond = new JPanel();
 		
-		private JLabel lblInfo = new JLabel("在此，您可以设置精确的查询条件来查找用户。");
-		private JRadioButton btnWhoIsOnline = new JRadioButton("看谁在线上");
-		private JRadioButton btnExactFind = new JRadioButton("精确查找");
+		private JLabel lblInfo = new JLabel("Advanced Search");
+		private JRadioButton btnWhoIsOnline = new JRadioButton("Find out who is on line");
+		private JRadioButton btnExactFind = new JRadioButton("Advanced Search");
 		private JLabel lblExactFind = new JLabel();
-		public JLabel lblOnlineNum = new JLabel("当前在线人数 :   未知");
+		public JLabel lblOnlineNum = new JLabel("Total Number :   Unknown");
 		
-		private JLabel lblInfo2 = new JLabel("以下是JQ为您查找到的用户。");
+		private JLabel lblInfo2 = new JLabel("Show the users");
 		public JTable tableUser = null;
 		private DefaultTableModel model = new MyDefaultTableModel();
 		
@@ -794,7 +772,7 @@ public class MainPane extends JFrame implements ActionListener{
 		public FindWindow(Frame owner, boolean modal) {
 			super(owner, modal);
 			
-			setTitle("JQ2008 查找/添加好友");
+			setTitle("Search/Add friends");
 			setSize(400,325);
 			setResizable(false);
 			Toolkit tk=Toolkit.getDefaultToolkit();
@@ -802,7 +780,7 @@ public class MainPane extends JFrame implements ActionListener{
 			try {
 				setIconImage(ImageIO.read(getClass().getResource("/client/images/searchbutton.gif")));
 			} catch (IOException e) {
-				System.out.println("错误:"+e.getMessage());
+				System.out.println("Error:"+e.getMessage());
 			}
 			init();
 			
@@ -849,7 +827,7 @@ public class MainPane extends JFrame implements ActionListener{
 			lblInfo2.setPreferredSize(new Dimension(360,34));
 			lblInfo2.setOpaque(true);
 			lblInfo2.setBackground(bgColor);
-			String[] data = {"账号","昵称","个性签名"};
+			String[] data = {"Account","Nickname","State"};
 			
 			model.addColumn(data[0]);
 			model.addColumn(data[1]);
@@ -875,7 +853,7 @@ public class MainPane extends JFrame implements ActionListener{
 			paneBaseFind.add("first", paneBaseFirst);
 			paneBaseFind.add("second", paneBaseSecond);
 			
-			paneFindWay.add("基本查找",paneBaseFind);
+			paneFindWay.add("Basic",paneBaseFind);
 			
 			//add(new FillWidth(5,5),BorderLayout.NORTH);
 			add(paneFindWay,BorderLayout.CENTER);
@@ -948,7 +926,7 @@ public class MainPane extends JFrame implements ActionListener{
 			if(e.getSource()==btnAddFriend){
 				int row = tableUser.getSelectedRow();
 				if(row==-1){
-					JOptionPane.showMessageDialog(null, "请选定一个用户!");
+					JOptionPane.showMessageDialog(null, "Please select one user!");
 					return;
 				}
 				Object value = tableUser.getValueAt(row, 0);
@@ -988,16 +966,12 @@ public class MainPane extends JFrame implements ActionListener{
 	
 	/**
 	 * 系统消息窗口。
-	 * 2008-9-27
-	 * @author		达内科技[Tarena Training Group]
-	 * @version	1.0
-	 * @since		JDK1.6(建议) 
 	 */
 	private class Broadcastwindow extends JDialog implements WindowFocusListener{
-		private JTextArea txt = new JTextArea("暂无系统消息!");
+		private JTextArea txt = new JTextArea("No message!");
 		public Broadcastwindow() {
 			super();
-			setTitle("系统消息");
+			setTitle("System Message");
 			setSize(200,160);
 			setResizable(false);
 			setLocation(MainPane.this.getLocationOnScreen().x,MainPane.this.getLocationOnScreen().y+357);
