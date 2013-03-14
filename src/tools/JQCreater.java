@@ -1,13 +1,4 @@
-/**
-  * @(#)tools.IDCreater.java  2008-9-3  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: JQ号生成器类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-9-3 	小猪     		新建
-  **/
+
 package tools;
 
 import java.io.File;

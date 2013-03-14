@@ -1,13 +1,3 @@
-/**
-  * @(#)tools.SetFont.java  2008.07.01  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 设置字体类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2007.07.17 	小猪     		新建
-  **/
 package tools;
 
 // Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.

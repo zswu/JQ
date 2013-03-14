@@ -1,13 +1,4 @@
-/**
-  * @(#)data.JQMessage.java  2008-9-4  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 客户端和服务端的消息类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-9-4 	小猪     		新建
-  **/
+
 package data;
 
 import java.io.Serializable;

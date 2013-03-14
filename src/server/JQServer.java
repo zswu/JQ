@@ -1,13 +1,4 @@
-/**
-  * @(#)server.JQServer.java  2008-8-28  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 服务端主程序类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-8-28 	小猪     		新建
-  **/
+
 package server;
 
 import java.awt.Font;

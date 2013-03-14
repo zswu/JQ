@@ -1,13 +1,4 @@
-/**
-  * @(#)data.FriendUser.java  2008-9-5  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 好友类。用户登陆后，发送好友的信息到客户端。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-9-5 	小猪     		新建
-  **/
+
 package data;
 
 import java.io.Serializable;

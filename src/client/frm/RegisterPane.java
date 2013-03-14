@@ -1,13 +1,4 @@
-/**
-  * @(#)client.frm.RegisterPane.java  2008-8-29  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 新用户注册类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-8-29 	小猪     		新建
-  **/
+
 package client.frm;
 
 import java.awt.Color;

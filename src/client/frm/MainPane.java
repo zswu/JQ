@@ -1,13 +1,4 @@
-/**
-  * @(#)client.frm.MainPane.java  2008-8-30  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: 主程序类、JQ的主框架类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-8-30 	小猪     		新建
-  **/
+
 package client.frm;
 
 import java.awt.BorderLayout;

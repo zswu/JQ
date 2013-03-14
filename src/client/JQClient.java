@@ -1,13 +1,4 @@
-/**
-  * @(#)client.JQClient.java  2008-8-29  
-  * Copy Right Information	: Tarena
-  * Project					: JavaQQ
-  * JDK version used		: jdk1.6.4
-  * Comments				: JQ客户端主程序类。
-  * Version					: 1.0
-  * Sr	Date		Modified By		Why & What is modified
-  * 1.	2008-8-29 	小猪     		新建
-  **/
+
 package client;
 
 import java.awt.Font;
